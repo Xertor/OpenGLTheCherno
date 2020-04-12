@@ -259,3 +259,9 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+Dependencies/glew-2.1.0/doc
+Dependencies/glfw-3.3.2.bin.WIN32/docs
+*.lib
+*.dll
+Dependencies/glfw-3.3.2.bin.WIN32/LICENSE.md
+Dependencies/glew-2.1.0/LICENSE.txt
