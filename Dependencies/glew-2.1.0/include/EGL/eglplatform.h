@@ -36,7 +36,7 @@
 #endif 
  
 #if (defined(_WIN32) || defined(__VC32__)) && !defined(__CYGWIN__) && !defined(__SCITECH_SNAP__) && !defined(_WIN32_WCE) /* Win32 */ 
-#define EGLAPIENTRY __stdcall 
+//#define EGLAPIENTRY __stdcall 
 #else 
 #define EGLAPIENTRY 
 #endif 
