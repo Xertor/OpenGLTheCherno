@@ -24,11 +24,21 @@ void Renderer::Clear() const
 
 void Renderer::Draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader) const
 {
+	// the shader program
+	// shader tells what to do with the data
 	shader.Bind();
-	//shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 
+	// the data
+	// contains all vertex data 
+	// like positions of each point to render, 
+	// texture coords, vertex colors, normals, binormals, tangents, etc.
 	va.Bind();
+
+	// contains indices into the vb to know 
+	// which vertices to render and how to assemble them
 	ib.Bind();
 
+	// using that ib, access the vb and call the 
+	// shader program on all the vertices individually, to draw and rasterize the object
 	GLCall(glDrawElements(GL_TRIANGLES, ib.GetCount(), GL_UNSIGNED_INT, nullptr));
 }
